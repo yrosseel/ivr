@@ -501,8 +501,8 @@ ivr <- function(y = NULL,              # single outcome
     names(theta.2) <- paste(NAMES[1], "~", NAMES[x.idx])
 
     theta.3 <- c(psi.yy, lav_matrix_vec(psi.xy))
-    names(theta.3) <- paste(NAMES[c(1, x.idx)], "~~",
-                            NAMES[c(1, x.idx)])
+    names(theta.3) <- c(paste(NAMES[1], "~~", NAMES[1]),
+                        paste(NAMES[1], "~~", NAMES[x.idx]))
 
     if(meanstructure) {
         theta.1m <- c(alpha.x, alpha.z)
